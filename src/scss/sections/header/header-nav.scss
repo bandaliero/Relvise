@@ -1,0 +1,90 @@
+.header-nav {
+  position: fixed;
+  width: 100%;
+
+  .header-nav_relative {
+    position: relative;
+
+
+    .container {
+      .header-nav_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 10px;
+
+        .nav-logo {
+
+          .nav-logo_title {
+
+            .nav-logo_link {
+              font-family: 'Akronim', cursive;
+              font-size: 28px;
+              font-weight: bold;
+              &:hover {
+                color: #2e8888;
+              }
+            }
+          }
+        }
+
+        .nav-menu {
+          border: 2px solid black;
+          border-radius: 5px;
+          background-color: rgba(180, 190, 190, 0.3);
+          &:hover {
+            background-color: #2e8888;
+            opacity: .5;
+          }
+          .nav-menu_icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #c0d1d1;
+          width: 40%;
+          height: 100vh;
+          transform: translateX(-100%);
+          transition: transform .5s ease-in;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .nav-links_items {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid black;
+
+            .nav-links_link {
+              display: block;
+              width: 100%;
+              padding: 20px 0;
+              transition: all .2s ease-in;
+              &:hover{
+                background-color: rgba(180, 190, 190, 0.5);
+                cursor: pointer;
+                color: #2e8888;
+              }
+            }
+          }
+        }
+        .active {
+          transform: translateX(0);
+        }
+        .activeLogo {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+.activeBg {
+  background-color: rgba(180, 190, 190, 0.5);
+}

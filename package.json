@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass src/scss/styles.scss src/css/styles.css",
+    "watch": "node-sass --watch src/scss/styles.scss src/css/styles.css",
+    "start": "npm run compile && npm run watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.1"
+  }
 }

@@ -4,5 +4,84 @@
   background-position: right top;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+
+  .header-content {
+    .header-content_inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 180px 10px;
+
+      @include breakpoint($tablet){
+        width: 50%;
+      }
+
+      .header-content_title {
+        line-height: calc(40 / 29 * 100%);
+        font-size: 29px;
+        font-weight: 800;
+        margin-bottom: 35px;
+        color: #ffffff;
+        @include breakpoint($tablet){
+          color: #000;
+        }
+      }
+
+      .header-content_subtitle {
+        color: #ffffff;
+        margin-bottom: 45px;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        line-height: 30px;
+        @include breakpoint($tablet){
+          color: $secondary-text-color;
+        }
+      }
+
+      .header-button_inner {
+        display: flex;
+        flex-direction: column;
+
+
+        @include breakpoint($tablet){
+          flex-direction: row;
+        }
+
+        .header-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 48px;
+          color: green;
+          padding: 5px 36px;
+          border-radius: 36px;
+          margin-bottom: 10px;
+          transition: background-color .3s ease-in;
+          @include breakpoint($tablet){
+            margin-right: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+        .header-button_orange {
+          background-color: #FF7B47;
+          color: #fff;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        .header-button_border {
+          color: #0D5C63;
+          border: 1px solid #0D5C63;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
 }
